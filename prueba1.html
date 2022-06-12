@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Proyecto de IA</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        textarea {
+            width: 100%;
+        }
+
+        .centro {
+            display: flex;
+            justify-content: center;
+            justify-self: center;
+            text-align: center;
+        }
+
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Comparador de códigos</h1>
+        <div class="row">
+            <div class="col">
+                <div id="cuadro1">
+                    <input type="file" id="archivo1"><br>
+                    <textarea rows="10" id="editor1" disabled></textarea>
+                    <br>
+                    <p id="datos1"></p>
+                </div>
+            </div>
+            <div class="col">
+                <div id="cuadro2">
+                    <input type="file" id="archivo2"><br>
+                    <textarea rows="10" id="editor2" disabled></textarea>
+                    <br>
+                    <p id="datos2"></p>
+                </div>
+            </div>
+        </div>
+        <div class="row centro">
+            <button type="button" onclick="compara()" id="comparar" class="btn btn-success">Comparar</button>
+            <button class="btn btn-info" onclick="limpiar()">Limpiar</button>
+        </div>
+        <div class="row">
+            <div id="final" cols="80" rows="10"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.1/markdown-it.min.js"
+        integrity="sha512-SYfDUYPg5xspsG6OOpXU366G8SZsdHOhqk/icdrYJ2E/WKZxPxze7d2HD3AyXpT7U22PZ5y74xRpqZ6A2bJ+kQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="ejecucion.js"></script>
+</body>
+
+</html>
